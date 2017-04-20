@@ -28,9 +28,8 @@ public class SimpleTopology {
         } else {
             LocalCluster cluster = new LocalCluster();
             cluster.submitTopology("firstTopo", conf, builder.createTopology());
-            Utils.sleep(10000);
-            cluster.killTopology("firstTopo");
-            cluster.shutdown();
+//            cluster.killTopology("firstTopo");
+//            cluster.shutdown();
         }
     }
 }

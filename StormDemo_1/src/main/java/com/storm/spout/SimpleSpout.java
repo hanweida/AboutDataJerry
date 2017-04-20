@@ -33,7 +33,6 @@ public class SimpleSpout  extends BaseRichSpout{
      * @see backtype.storm.spout.ISpout#nextTuple()
      */
     public void nextTuple() {
-        System.out.println("dd");
         // TODO Auto-generated method stub
         String word = words[new Random().nextInt(words.length)];
         collector.emit(new Values(word));

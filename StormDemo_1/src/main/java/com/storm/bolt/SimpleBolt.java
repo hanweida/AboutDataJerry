@@ -19,7 +19,7 @@ public class SimpleBolt extends BaseBasicBolt{
     public void execute(Tuple input, BasicOutputCollector collector) {
         // TODO Auto-generated method stub
         String word = (String) input.getValue(0);
-        String out = "I'm " + word +  "!";
+        String out = "-------------------I'm " + word +  "!";
         System.out.println("out=" + out);
     }
 
