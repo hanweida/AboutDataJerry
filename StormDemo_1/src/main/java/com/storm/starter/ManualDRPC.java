@@ -64,6 +64,5 @@ public class ManualDRPC {
     //传入exclamation 对应DRPCSpout function , 参数2传递的是 输入字符串，得到的结果为 execute 结果
     System.out.println(drpc.execute("exclamation", "aaa"));
     System.out.println(drpc.execute("exclamation", "bbb"));
-
   }
 }

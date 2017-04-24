@@ -37,6 +37,9 @@ import backtype.storm.tuple.Values;
  * Storm.
  */
 public class BasicDRPCTopology {
+    /**
+     * Bolt,获得tuple，得到的字符串后加一个 !
+     */
   public static class ExclaimBolt extends BaseBasicBolt {
     public void execute(Tuple tuple, BasicOutputCollector collector) {
       String input = tuple.getString(1);
@@ -54,7 +57,6 @@ public class BasicDRPCTopology {
     builder.addBolt(new ExclaimBolt(), 3);
 
     Config conf = new Config();
-
     if (args == null || args.length == 0) {
       LocalDRPC drpc = new LocalDRPC();
       LocalCluster cluster = new LocalCluster();
@@ -69,6 +71,7 @@ public class BasicDRPCTopology {
       drpc.shutdown();
     }
     else {
+      System.out.println("args[]-----------------------------------------"+args[0]);
       conf.setNumWorkers(3);
       StormSubmitter.submitTopologyWithProgressBar(args[0], conf, builder.createRemoteTopology());
     }
