@@ -175,7 +175,7 @@ public class ReachTopology {
 
     Config conf = new Config();
     System.setProperty("storm.jar","D:\\课程\\storm课程\\storm第一天\\课程附件资料\\Storm\\classes\\artifacts\\Storm_jar\\Storm.jar");
-    DRPCClient client = new DRPCClient(conf,"192.168.57.4", 3772);
+    DRPCClient client = new DRPCClient("192.168.57.4", 3772);
     String result = client.execute("reach", "http://twitter.com");
     System.out.println(result);
     if (args == null || args.length == 0) {
