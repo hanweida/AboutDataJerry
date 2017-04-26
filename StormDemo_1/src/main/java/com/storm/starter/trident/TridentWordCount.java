@@ -39,7 +39,6 @@ import storm.trident.tuple.TridentTuple;
 
 public class TridentWordCount {
   public static class Split extends BaseFunction {
-    @Override
     public void execute(TridentTuple tuple, TridentCollector collector) {
       String sentence = tuple.getString(0);
       for (String word : sentence.split(" ")) {
@@ -53,7 +52,7 @@ public class TridentWordCount {
             new Values("the cow jumped over the moon"),
             new Values("the man went to the store and bought some candy"),
             new Values("four score and seven years ago"),
-             new Values("how many apples can you eat"),
+            new Values("how many apples can you eat"),
             new Values("to be or not to be the person"),
             new Values("to be or not to be the person"),
             new Values("to be or not to be the person"),

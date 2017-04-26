@@ -1,4 +1,4 @@
-package com.storm.starter;
+package com.storm.starter.test;
 
 import backtype.storm.Config;
 import backtype.storm.generated.DRPCExecutionException;
