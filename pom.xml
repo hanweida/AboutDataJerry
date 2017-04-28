@@ -12,6 +12,7 @@
     <module>KafkaStormHBaseDemo</module>
     <module>KafkaStormHdfs_3</module>
     <module>StormDemo_1</module>
+    <module>ZookeeperDemo</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -26,8 +27,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
+      <version>4.8.2</version>
     </dependency>
     <dependency>
       <groupId>org.apache.flume</groupId>
